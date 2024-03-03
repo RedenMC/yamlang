@@ -30,11 +30,30 @@ gradlePlugin {
     vcsUrl = 'https://github.com/Fallen-Breath/yamlang'
     plugins {
         yamlangPlugin {
-            id = 'me.fallenbreath.yamlang'
+            id = 'com.redenmc.yamlang'
             displayName = 'Yamlang'
             description = 'A gradle plugin to convert nestable yaml language file into plain json language file for Minecraft mods'
             implementationClass = 'me.fallenbreath.yamlang.YamlangPlugin'
             tags.set(['Minecraft', 'mod'])
+        }
+    }
+}
+
+def ENV = System.getenv()
+publishing {
+    publications {
+        mavenJava(MavenPublication) {
+            from components.java
+        }
+    }
+
+    repositories {
+        maven {
+            url ENV.MAVEN_URL
+            credentials {
+                username ENV.MAVEN_USER
+                password ENV.MAVEN_PASSWORD
+            }
         }
     }
 }

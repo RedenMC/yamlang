@@ -1,9 +1,8 @@
 ## yamlang
 
-[![JitPack](https://jitpack.io/v/Fallen-Breath/yamlang.svg)](https://jitpack.io/#Fallen-Breath/yamlang)
-[![Gradle Plugin Portal](https://img.shields.io/gradle-plugin-portal/v/me.fallenbreath.yamlang)](https://plugins.gradle.org/plugin/me.fallenbreath.yamlang)
-
 A gradle plugin to convert nestable yaml language file into plain json language file for Minecraft mods
+
+Created by fallen breath, and modified by zly2006 to adapt owo's rich translation.
 
 ### What's nestable yaml format
 
